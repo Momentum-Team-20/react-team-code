@@ -21,12 +21,19 @@ function App() {
 
 function Card({ front_card, back_card }) {
   // finish writing useState for flipping card over
-  // const []
+  const [ isFlipped, setIsFlipped ] = useState(false)
+
+const handleFlippedCard = (event) => {
+  console.log("flipping card")
+  if (!isFlipped) {
+    setIsFlipped(true)
+  } 
+} 
 
   return (
     <div>
       <div>{front_card}</div>
-      <div>{back_card}</div>
+      <div onClick={handleFlippedCard}>{back_card}</div>
     </div>
   )
 }
