@@ -1,8 +1,13 @@
 function App() {
+  const emojis = ["🌸", "⚡️", "👻", "👽", "🐬", "🍄"]
+  const back = "🍕"
   return (
     <main>
-      <h1>Coding is a Team Sport</h1>
-      <p>Delete all this and put the code you need to write here.</p>
+      <div className="cardContainer">
+        {emojis.map((emoji) => (
+          {emoji}
+        ))}
+      </div>
     </main>
   )
 }
